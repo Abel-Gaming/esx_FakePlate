@@ -1,5 +1,4 @@
 ESX              = nil
-local hudHidden = false
 
 Citizen.CreateThread(function()
 	while ESX == nil do
