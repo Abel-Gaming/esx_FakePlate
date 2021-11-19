@@ -51,5 +51,8 @@ function ChangePlateText(newplatetext)
 
 		-- Show notification
 		ESX.ShowNotification('~g~[SUCCESS]~w~ The plate has been changed to ~b~' .. newplatetext)
+	else
+		-- Show error notification
+		ESX.ShowNotification('~r~[ERROR]~w~ There is no vehicle nearby!')
 	end
 end
