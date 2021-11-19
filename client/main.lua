@@ -42,6 +42,9 @@ function ChangePlateText(newplatetext)
 	-- Get the vehicle coords
 	local vehicleCoords = GetEntityCoords(vehicle)
 
+	-- Get the vehicle name
+	local vehiclename = GetDisplayNameFromVehicleModel(ESX.Game.GetVehicleProperties(vehicle).model)
+
 	-- Check the distance
 	if #(playerCoords - vehicleCoords) <= 5 then
 		-- Set the vehicle plate
@@ -50,7 +53,7 @@ function ChangePlateText(newplatetext)
     	})
 
 		-- Show notification
-		ESX.ShowNotification('~g~[SUCCESS]~w~ The plate has been changed to ~b~' .. newplatetext)
+		ESX.ShowNotification('~g~[SUCCESS]~w~ The plate has been changed to ~b~' .. newplatetext .. ' ~w~for ~y~' .. vehiclename)
 	else
 		-- Show error notification
 		ESX.ShowNotification('~r~[ERROR]~w~ There is no vehicle nearby!')
